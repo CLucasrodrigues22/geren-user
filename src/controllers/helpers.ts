@@ -16,6 +16,7 @@ export const badRequest = (message: string): HttpResponse<string> => {
     body: message,
   };
 };
+// Chamando a função serverError para obter o objeto HttpResponse
 
 export const serverError = (): HttpResponse<string> => {
   return {
@@ -23,3 +24,9 @@ export const serverError = (): HttpResponse<string> => {
     body: "Something went wrong",
   };
 };
+
+// Exemplo de uso da função serverError para pegar a descrição do erro
+const response = serverError();
+const errorMessage = response.body;
+
+console.log(errorMessage);
