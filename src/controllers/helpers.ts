@@ -27,6 +27,6 @@ export const serverError = (): HttpResponse<string> => {
 
 // Exemplo de uso da função serverError para pegar a descrição do erro
 const response = serverError();
-const errorMessage = response.body;
+const errorMessage = response;
 
 console.log(errorMessage);
